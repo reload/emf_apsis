@@ -8,3 +8,5 @@ See the install.txt for more information.
 
 This is an early beta, the dependency to the nusoap library will be removed in the near future.
 
+If you want to change the subscription blocks template, then copy the 'example-block-emf-common.tpl.php' to your theme dir and rename to either block-emf.tpl.php or block-emf-common.tpl.php
+
