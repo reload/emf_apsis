@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Drupal hooks
+ *
+ * @author Hasse Ramlev Hansen 
+ */
+
+/**
+ * Implementation of hook_menu()
+ */
+function emf_apsis_menu() {
+
+  // settings
+  $items['admin/settings/emf_apsis'] = array(
+    'title'            => 'Apsis',
+    'description'      => 'Configure Apsis settings.',
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('emf_apsis_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file'             => 'emf_apsis.settings.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_emf_info()
+ */
+function emf_apsis_emf_info() {
+  return array(
+    'name' => 'Apsis',
+    'file' => 'emf_apsis.api.inc',
+  );
+}
+

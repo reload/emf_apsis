@@ -1,0 +1,7 @@
+name = EMF Apsis Plugin
+description = E-mail Marketing Framework plugin for Apsis integration.
+version = 0.8beta
+core = 6.x
+package = E-mail Marketing Framework
+dependencies[] = emf
+dependencies[] = libraries

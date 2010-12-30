@@ -1,0 +1,10 @@
+Installation guide
+
+* Download http://sourceforge.net/projects/nusoap/ and extract to /sites/all/libraries/nusoap
+* drush dl emf libraries
+* git clone git://github.com/reload/emf_apsis.git sites/all/modules/emf_apsis
+* drush en emf_apsis (should enable emf, emf_apsis and libraries modules)
+* Go to /admin/settings/emf_apsis and enter the required information.
+* Define which user roles who can subscribe to lists (/admin/user/permissions)
+* Show the 'E-mail Marketing Framework : common subscription block' somewhere on the website, and you're ready to go.
+
