@@ -20,6 +20,7 @@ function emf_apsis_api_subscribe($email, $fields, $lid) {
     'strFormat'        => '',
     'strMailingListID' => $lid,
   ));
+  //TODO: Add some error handling
 }
 
 /**
@@ -31,6 +32,7 @@ function emf_apsis_api_unsubscribe($email, $lid) {
     'strEmail'         => $email,
     'strMailingListID' => $lid,
   ));
+  //TODO: Add some error handling
 }
 
 /**
@@ -51,9 +53,14 @@ function emf_apsis_api_get_subscribers_subscribed($date = 0, $lid = NULL) {
 		'strMailingListId' => $lid,
   ));
 
-  foreach ($all_subscribers['GetSubscribersResult']['diffgram']['NewDataSet']['Subscriber'] as $subscriber) {
-    $subscribers[] = $subscriber['Email'];
+  if (is_array($all_subscribers) && isset($all_subscribers['GetSubscribersResult']['diffgram']['NewDataSet']['Subscriber'])) {
+	  foreach ($all_subscribers['GetSubscribersResult']['diffgram']['NewDataSet']['Subscriber'] as $subscriber) {
+	    $subscribers[] = $subscriber['Email'];
+	  }
+  } else {
+  	//TODO: Add some error handling
   }
+  
   return $subscribers;
 }
 
@@ -65,13 +72,18 @@ function emf_apsis_api_get_lists() {
   $anp          = new AnpSoapclient(variable_get('emf_apsis_api_username', ''), variable_get('emf_apsis_api_password', ''));
   $mailinglists = $anp->call('GetMailingLists');
 
-  foreach ($mailinglists['GetMailingListsResult']['diffgram']['NewDataSet']['MailingList'] as $list) {
-    $lists[$list['MailingListID']] = (object) array(
-      'lid'      => $list['MailingListID'],
-      'name_api' => $list['Name'],
-    );
+  if (is_array($mailinglists) && isset($mailinglists['GetMailingListsResult']['diffgram']['NewDataSet']['MailingList'])) {
+	  foreach ($mailinglists['GetMailingListsResult']['diffgram']['NewDataSet']['MailingList'] as $list) {
+	    $lists[$list['MailingListID']] = (object) array(
+	      'lid'      => $list['MailingListID'],
+	      'name_api' => $list['Name'],
+	    );
+	  }
+  } else {
+  	//TODO: Add some error handling
   }
-	return $lists;
+
+  return $lists;
 }
 
 /**
