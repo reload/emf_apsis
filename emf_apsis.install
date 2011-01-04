@@ -8,7 +8,6 @@ function emf_apsis_requirements($phase) {
   $t            = get_t();
 
   if ($phase == 'runtime') {
-
     // Raise warning if Apsis API nformation has not been set yet.
     if (trim(variable_get('emf_apsis_api_username', '')) == '' || trim(variable_get('emf_apsis_api_password', '')) == '') {
       $requirements['emf_apsis'] = array(
@@ -18,8 +17,43 @@ function emf_apsis_requirements($phase) {
         'value'       => $t('Not configured'),
       );
     }
-  }
+    
+    //Make sure we have the NuSOAP library installed
+    $libraries = libraries_get_libraries();
+    $requirement = array('title' => $t('Apsis API SOAP Library'));
+    if (isset($libraries['nusoap'])) {
+      $requirement += array(
+        'severity'    => REQUIREMENT_OK,
+        'value'       => $t('NuSOAP library installed'),
+      );
+    } else {
+    	$requirement += array(
+        'severity'    => REQUIREMENT_ERROR,
+        'value'       => $t('NuSOAP library not installed'),
+    	  'description' => $t('Please download NuSOAP from @url, extract it and place the lib folder in your libraries folder.', array('@url' => 'http://sourceforge.net/projects/nusoap/')),
+    	);
+    }
+    $requirements['emf_apsis_nusoap'] = $requirement;
 
+	  //Check that we are able to get lists from Apsis
+	  module_load_include('api.inc', 'emf_apsis');
+	  $lists = emf_apsis_api_get_lists();
+	  $requirement = array(
+	    'title'       => $t('Apsis API newsletter lists'),
+	    'severity'    => REQUIREMENT_OK,
+	    'value'       => $t('@num_lists lists available', array('@num_lists' => sizeof($lists))),
+	  );
+	  if (sizeof($lists) == 0) {
+	  	$requirement = array_merge($requirement, array(
+	      'severity'    => REQUIREMENT_WARNING,
+		  	'description' => $t('No lists were retrieved from Apsis. This could either be due to no lists being available in Apsis or indicate a problem with the communication with the Apsis API. Check that username and password are entered correctly at the !settings_page.', 
+	  	                      array('@num_lists' => sizeof($lists),
+	  	                            '!settings_page' => l($t('Apsis settings page'), 'admin/settings/emf_apsis'))),
+	  	));
+	  }
+	  $requirements['emf_apsis_lists'] = $requirement;
+  }
+  
   return $requirements;
 }
 
