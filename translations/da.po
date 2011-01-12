@@ -1,0 +1,599 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  emf.actions.inc,v 1.2 2009/11/09 14:11:52 davyvandenbremt
+#  emf.admin.inc,v 1.7 2009/11/09 14:11:52 davyvandenbremt
+#  emf.settings.inc,v 1.2 2009/10/28 14:16:51 davyvandenbremt
+#  emf.module,v 1.14 2009/11/09 15:00:33 davyvandenbremt
+#  emf.reports.inc,v 1.2 2009/10/28 14:16:51 davyvandenbremt
+#  emf.form.inc,v 1.8 2010/02/10 07:00:24 davyvandenbremt
+#  emf.page.inc,v 1.4 2009/11/09 15:04:42 davyvandenbremt
+#  emf.info,v 1.2 2009/10/28 14:16:51 davyvandenbremt
+#  emf_campaign_monitor.info,v 1.1 2009/10/28 18:59:01 davyvandenbremt
+#  emf_mailchimp.info,v 1.1 2009/10/28 18:59:01 davyvandenbremt
+#  emf.install,v 1.11 2009/11/09 15:00:33 davyvandenbremt
+#  emf_campaign_monitor.settings.inc,v 1.1 2009/10/28 18:59:01 davyvandenbremt
+#  emf_mailchimp.settings.inc,v 1.1 2009/10/28 18:59:01 davyvandenbremt
+#  emf_campaign_monitor.module,v 1.1 2009/10/28 18:59:01 davyvandenbremt
+#  emf_campaign_monitor.install,v 1.5 2009/11/09 14:11:52 davyvandenbremt
+#  emf_mailchimp.install,v 1.5 2009/11/09 14:11:52 davyvandenbremt
+#  emf_mailchimp.module,v 1.2 2010/05/29 14:17:26 davyvandenbremt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2011-01-12 13:20+0100\n"
+"PO-Revision-Date: 2011-01-12 13:23+0100\n"
+"Last-Translator: Hasse Ramlev Hansen <hasse@ramlev.dk>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: emf.actions.inc:17
+msgid "Subscribe a user to certain EMF lists"
+msgstr ""
+
+#: emf.actions.inc:26
+msgid "Unsubscribe a user from certain EMF lists"
+msgstr ""
+
+#: emf.actions.inc:45
+msgid "Lists"
+msgstr ""
+
+#: emf.actions.inc:46
+msgid "Select the lists for this action."
+msgstr ""
+
+#: emf.admin.inc:14;127
+#: emf.settings.inc:105
+msgid "Name"
+msgstr ""
+
+#: emf.admin.inc:14;64
+msgid "List ID"
+msgstr ""
+
+#: emf.admin.inc:14
+msgid "Operations"
+msgstr ""
+
+#: emf.admin.inc:25
+msgid "Manage"
+msgstr ""
+
+#: emf.admin.inc:26
+msgid "View page"
+msgstr ""
+
+#: emf.admin.inc:27;449
+#: emf.module:113
+msgid "Delete"
+msgstr ""
+
+#: emf.admin.inc:34
+#: emf.reports.inc:26
+msgid "No lists synchronised yet or no lists available in your account. Run cron to synchronise your lists."
+msgstr ""
+
+#: emf.admin.inc:43
+msgid "This list was found in your e-mail marketing service. All is well."
+msgstr ""
+
+#: emf.admin.inc:46
+msgid "This list could not be found (anymore) in your e-mail marketing service. Maybe you removed it? If so, you could decide to remove this list here to."
+msgstr ""
+
+#: emf.admin.inc:58
+msgid "API Info"
+msgstr ""
+
+#: emf.admin.inc:65
+msgid "The ID for this list as it is specified in your e-mail marketing service."
+msgstr ""
+
+#: emf.admin.inc:71
+msgid "API Name"
+msgstr ""
+
+#: emf.admin.inc:72
+msgid "The name for this list as it is specified in your e-mail marketing service."
+msgstr ""
+
+#: emf.admin.inc:78
+msgid "API Status"
+msgstr ""
+
+#: emf.admin.inc:85
+msgid "View subscription page"
+msgstr ""
+
+#: emf.admin.inc:91
+msgid "Status"
+msgstr ""
+
+#: emf.admin.inc:96
+#: emf.settings.inc:92
+msgid "Activate on this site"
+msgstr ""
+
+#: emf.admin.inc:97
+msgid "If a list is not activated, it's fields and subscriptions will not be synced with your e-mail marketing service. Subscription will not be possible and no subscription block will be available for the list."
+msgstr ""
+
+#: emf.admin.inc:103
+msgid "Language neutral"
+msgstr ""
+
+#: emf.admin.inc:107;112
+msgid "Language"
+msgstr ""
+
+#: emf.admin.inc:113
+msgid "Setting a list for a language means its block and its entry in the common subscription form will only appear on pages in that language."
+msgstr ""
+
+#: emf.admin.inc:122
+#: emf.settings.inc:100
+#: emf.module:90
+msgid "Info"
+msgstr ""
+
+#: emf.admin.inc:128
+msgid "The name of the list. This can differ from the name specified in your e-mail marketing service. An example of where the list name is used is in the subscription block title. You can use !name_api as a replacement variable."
+msgstr ""
+
+#: emf.admin.inc:134
+#: emf.settings.inc:112
+msgid "Action name"
+msgstr ""
+
+#: emf.admin.inc:135
+msgid "The action name of the list. An example of where the list's action name is used is in the subscription form checkboxes. You can use !name and !name_api as replacement variables."
+msgstr ""
+
+#: emf.admin.inc:141
+#: emf.settings.inc:119
+msgid "Long action name"
+msgstr ""
+
+#: emf.admin.inc:142
+msgid "The long action name of the list. An example of where the list's long action name is used is in the subscription form intro text for anonymous users. You can use !name and !name_api as replacement variables."
+msgstr ""
+
+#: emf.admin.inc:147
+msgid "Description"
+msgstr ""
+
+#: emf.admin.inc:148
+msgid "Description of this list. The value for this field will not be displayed but it can be used to document this list for future reference."
+msgstr ""
+
+#: emf.admin.inc:155;300;421
+msgid "Save"
+msgstr ""
+
+#: emf.admin.inc:182
+msgid "List modifications have been successfully saved."
+msgstr ""
+
+#: emf.admin.inc:189
+msgid "Unmapped"
+msgstr ""
+
+#: emf.admin.inc:225
+msgid "PHP code"
+msgstr ""
+
+#: emf.admin.inc:231
+msgid "Profile"
+msgstr ""
+
+#: emf.admin.inc:235
+msgid "Token"
+msgstr ""
+
+#: emf.admin.inc:286
+msgid "Token replacement patterns"
+msgstr ""
+
+#: emf.admin.inc:290
+msgid "Prefer raw-text replacements for text to avoid problems with HTML entities!"
+msgstr ""
+
+#: emf.admin.inc:311
+msgid "List field"
+msgstr ""
+
+#: emf.admin.inc:311
+msgid "Mapping source"
+msgstr ""
+
+#: emf.admin.inc:311
+msgid "Source value"
+msgstr ""
+
+#: emf.admin.inc:311
+msgid "Ask anonymous"
+msgstr ""
+
+#: emf.admin.inc:311
+msgid "Show in common form"
+msgstr ""
+
+#: emf.admin.inc:311
+msgid "Weight"
+msgstr ""
+
+#: emf.admin.inc:334
+msgid "No fields synchronised yet or no fields available for this list. Run cron to synchronise your e-mail marketing service account."
+msgstr ""
+
+#: emf.admin.inc:386
+msgid "Mapping modifications have been successfully saved."
+msgstr ""
+
+#: emf.admin.inc:413
+msgid "Allow subscription for specific roles"
+msgstr ""
+
+#: emf.admin.inc:416
+msgid "If a user has any of the roles checked, he will be able to subscribe to this list and see its block, page etc."
+msgstr ""
+
+#: emf.admin.inc:436
+msgid "Role modifications have been successfully saved."
+msgstr ""
+
+#: emf.admin.inc:446
+msgid "Are you sure you want to delete %name?"
+msgstr ""
+
+#: emf.admin.inc:448
+msgid "This action cannot be undone."
+msgstr ""
+
+#: emf.admin.inc:450
+msgid "Cancel"
+msgstr ""
+
+#: emf.admin.inc:458
+msgid "List has been successfully deleted. All requests will be deleted. Subscriptions that were already pushed will still exists on your e-mail marketing service account."
+msgstr ""
+
+#: emf.form.inc:71
+msgid "E-mail"
+msgstr ""
+
+#: emf.form.inc:123
+#: emf.module:248;154
+msgid "Newsletters"
+msgstr ""
+
+#: emf.form.inc:138
+msgid "Subscribe"
+msgstr ""
+
+#: emf.form.inc:148
+msgid "Not a valid e-mail address."
+msgstr "Du skal udfylde en gyldig email adresse"
+
+#: emf.form.inc:187
+msgid "You have now been subscribed to the mailing list !list"
+msgstr ""
+
+#: emf.page.inc:22
+msgid "You are not allowed to view this subscription form or are already subscribed to this list."
+msgstr ""
+
+#: emf.reports.inc:12;33
+#: emf.module:76
+msgid "List"
+msgstr ""
+
+#: emf.reports.inc:12
+msgid "Subscribers"
+msgstr ""
+
+#: emf.reports.inc:33
+msgid "Mail"
+msgstr ""
+
+#: emf.reports.inc:33
+msgid "Type"
+msgstr ""
+
+#: emf.reports.inc:33
+msgid "Date"
+msgstr ""
+
+#: emf.reports.inc:44
+msgid "!time ago"
+msgstr ""
+
+#: emf.reports.inc:49
+msgid "No requests pending."
+msgstr ""
+
+#: emf.settings.inc:18
+msgid "Never (disable)"
+msgstr ""
+
+#: emf.settings.inc:19
+msgid "Every cron run"
+msgstr ""
+
+#: emf.settings.inc:25
+msgid "Account handling"
+msgstr ""
+
+#: emf.settings.inc:30
+msgid "Unsubscribe when account is deleted"
+msgstr ""
+
+#: emf.settings.inc:31
+msgid "When a user's account is deleted on this website, unsubscribe the corresponding e-mail address from all lists."
+msgstr ""
+
+#: emf.settings.inc:38
+msgid "Synchronisation"
+msgstr ""
+
+#: emf.settings.inc:43
+msgid "Requests synchronisation interval"
+msgstr ""
+
+#: emf.settings.inc:44
+msgid "Specify the maximum time before subscriptions are pushed."
+msgstr ""
+
+#: emf.settings.inc:50
+msgid "Struture synchronisation interval"
+msgstr ""
+
+#: emf.settings.inc:51
+msgid "Specify the maximum time before the structure (lists and fields) are synced."
+msgstr ""
+
+#: emf.settings.inc:57
+msgid "Subscriptions synchronisation interval"
+msgstr ""
+
+#: emf.settings.inc:58
+msgid "Specify the maximum time before the subscriptions are synced."
+msgstr ""
+
+#: emf.settings.inc:72
+msgid "Resync subscriptions synchronisation."
+msgstr ""
+
+#: emf.settings.inc:80
+msgid "Subscriptions synchronisation successfully reset. Next time subscriptions are synchronised, all states will be checked."
+msgstr ""
+
+#: emf.settings.inc:87
+msgid "Default status"
+msgstr ""
+
+#: emf.settings.inc:93
+msgid "Default value for the status of the list. When a new list is synced, this will be the default status for this list. If a list is not activated, it's fields and subscriptions will not be synced with your e-mail marketing service. Subscription will not be possible and no subscription block will be available for the list."
+msgstr ""
+
+#: emf.settings.inc:106
+msgid "Default value for the name of the list. When a new list is synced, this will be the default name for this list. This can differ from the name specified in your e-mail marketing service. An example of where the list name is used is in the subscription block title. You can use !name as a replacement variable."
+msgstr ""
+
+#: emf.settings.inc:113
+msgid "Default value for the action name of the list. When a new list is synced, this will be the default action name for this list. An example of where the list's action name is used is in the subscription form checkboxes. You can use !name and !name_api as replacement variables."
+msgstr ""
+
+#: emf.settings.inc:120
+msgid "Default value for the long action name of the list. When a new list is synced, this will be the default long action name for this list. An example of where the list's long action name is used is in the subscription form intro text for anonymous users. You can use !name and !name_api as replacement variables."
+msgstr ""
+
+#: emf.module:218
+msgid "E-mail Marketing Framework : !name"
+msgstr ""
+
+#: emf.module:225
+msgid "E-mail Marketing Framework : common subscription block"
+msgstr ""
+
+#: emf.module:323
+msgid "php"
+msgstr ""
+
+#: emf.module:323
+msgid "The installed Mailing Service plugin %plugin can not correctly process %function."
+msgstr ""
+
+#: emf.module:21
+msgid "administer lists"
+msgstr ""
+
+#: emf.module:22
+msgid "view reports"
+msgstr ""
+
+#: emf.module:34;69;123
+#: emf.info:0;0
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.info:0
+#: plugins/emf_mailchimp/emf_mailchimp.info:0
+msgid "E-mail Marketing Framework"
+msgstr ""
+
+#: emf.module:35
+msgid "Configure E-mail Marketing Framework settings."
+msgstr ""
+
+#: emf.module:42
+msgid "Defaults"
+msgstr ""
+
+#: emf.module:47
+msgid "Advanced"
+msgstr ""
+
+#: emf.module:48
+msgid "Configure E-mail Marketing Framework advanced settings."
+msgstr ""
+
+#: emf.module:57
+msgid "Tools"
+msgstr ""
+
+#: emf.module:58
+msgid "Configure E-mail Marketing Framework tools."
+msgstr ""
+
+#: emf.module:70
+msgid "Configure E-mail Marketing Framework lists."
+msgstr ""
+
+#: emf.module:81
+msgid "Edit"
+msgstr ""
+
+#: emf.module:95
+msgid "Field mapping"
+msgstr ""
+
+#: emf.module:104
+msgid "Roles"
+msgstr ""
+
+#: emf.module:124
+msgid "View your e-mail marketing service subscriber and request reports."
+msgstr ""
+
+#: emf.module:130
+msgid "Subscriptions"
+msgstr ""
+
+#: emf.module:135
+msgid "Pending requests"
+msgstr ""
+
+#: (duplicate) emf.install:99
+msgid "No E-mail Marketing Framework plugin installed"
+msgstr ""
+
+#: (duplicate) emf.install:100
+msgid "You have not installed a E-mail Marketing Framework plugin yet. E-mail Marketing Framework will not work correctly."
+msgstr ""
+
+#: (duplicate) emf.install:102
+#: ;112
+msgid "Not installed"
+msgstr ""
+
+#: (duplicate) emf.install:109
+msgid "Multiple E-mail Marketing Framework plugins installed"
+msgstr ""
+
+#: (duplicate) emf.install:110
+msgid "You have installed multiple E-mail Marketing Framework plugin. E-mail Marketing Framework only supports 1 active plugin at a time (at this moment)."
+msgstr ""
+
+#: (duplicate) emf.install:120
+msgid "E-mail Marketing Framework lists"
+msgstr ""
+
+#: (duplicate) emf.install:121
+msgid "Some lists could not be found on your e-mail marketing service anymore."
+msgstr ""
+
+#: (duplicate) emf.install:123
+msgid "List not found"
+msgstr ""
+
+#: emf.info:0
+msgid "Integration for list based e-mail marketing services like Campaign Monitor, MailChimp, ..."
+msgstr ""
+
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.settings.inc:17
+#: plugins/emf_mailchimp/emf_mailchimp.settings.inc:17
+msgid "API Key"
+msgstr ""
+
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.settings.inc:18
+msgid "Your Campaign Monitor API Key. See Campaign Monitor's <a href=\"http://www.campaignmonitor.com/api/required/\">documentation</a> for more info."
+msgstr ""
+
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.settings.inc:24
+msgid "Client ID"
+msgstr ""
+
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.settings.inc:25
+msgid "Your Campaign Monitor Client ID. See Campaign Monitor's <a href=\"http://www.campaignmonitor.com/api/required/\">documentation</a> for more info."
+msgstr ""
+
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.module:18
+msgid "Campaign Monitor"
+msgstr ""
+
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.module:19
+msgid "Configure Campaign Monitor settings."
+msgstr ""
+
+#: (duplicate) plugins/emf_campaign_monitor/emf_campaign_monitor.install:47
+msgid "Campaign Monitor API key"
+msgstr ""
+
+#: (duplicate) plugins/emf_campaign_monitor/emf_campaign_monitor.install:48
+msgid "Your Campaign Monitor API key has not been set yet. Please specify it on the <a href=\"@url\">Campaign Monitor settings page</a>."
+msgstr ""
+
+#: (duplicate) plugins/emf_campaign_monitor/emf_campaign_monitor.install:50
+#: ;60  plugins/emf_mailchimp/emf_mailchimp.install:48
+msgid "Not configured"
+msgstr ""
+
+#: (duplicate) plugins/emf_campaign_monitor/emf_campaign_monitor.install:57
+msgid "Campaign Monitor Client ID"
+msgstr ""
+
+#: (duplicate) plugins/emf_campaign_monitor/emf_campaign_monitor.install:58
+msgid "Your Campaign Monitor Client ID has not been set yet. Please specifiy it on the <a href=\"@url\">Campaign Monitor settings page</a>."
+msgstr ""
+
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.info:0
+msgid "Campaign Monitor Plugin"
+msgstr ""
+
+#: plugins/emf_campaign_monitor/emf_campaign_monitor.info:0
+msgid "E-mail Marketing Framework plugin for Campaign Monitor integration."
+msgstr ""
+
+#: plugins/emf_mailchimp/emf_mailchimp.settings.inc:18
+msgid "Your MailChimp API Key."
+msgstr ""
+
+#: plugins/emf_mailchimp/emf_mailchimp.module:18
+msgid "MailChimp"
+msgstr ""
+
+#: plugins/emf_mailchimp/emf_mailchimp.module:19
+msgid "Configure MailChimp settings."
+msgstr ""
+
+#: (duplicate) plugins/emf_mailchimp/emf_mailchimp.install:45
+msgid "MailChimp API key"
+msgstr ""
+
+#: (duplicate) plugins/emf_mailchimp/emf_mailchimp.install:46
+msgid "Your MailChimp API key has not been set yet. Please specify it on the <a href=\"@url\">MailChimp settings page</a>."
+msgstr ""
+
+#: plugins/emf_mailchimp/emf_mailchimp.info:0
+msgid "MailChimp Plugin"
+msgstr ""
+
+#: plugins/emf_mailchimp/emf_mailchimp.info:0
+msgid "E-mail Marketing Framework plugin for MailChimp integration."
+msgstr ""
+
