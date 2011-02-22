@@ -99,7 +99,7 @@ function emf_apsis_api_get_lists() {
  * Implements hook_api_get_custom_fields()
  */
 function emf_apsis_api_get_custom_fields($lid) {
-  $anp = new AnpSoapclient(variable_get('emf_apsis_api_username', ''), variable_get('emf_apsis_api_password', ''), 'http://api.anp.se/anp.asmx?wsdl');
+	return array();
 }
 
 /**
