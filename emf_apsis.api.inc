@@ -21,6 +21,9 @@ function emf_apsis_api_subscribe($email, $fields, $lid) {
     'strMailingListID' => $lid,
   ));
   //TODO: Add some error handling
+  
+  //For now we assume subscribing worked as expected so return success
+  return true;
 }
 
 /**
@@ -33,6 +36,9 @@ function emf_apsis_api_unsubscribe($email, $lid) {
     'strMailingListID' => $lid,
   ));
   //TODO: Add some error handling
+  
+  //For now we assume unsubscribing worked as expected so return success
+  return true;
 }
 
 /**
