@@ -48,6 +48,9 @@ function emf_apsis_api_get_subscribers_unsubscribed($date = 0, $lid = NULL) {
 
 function emf_apsis_api_get_subscribers_subscribed($date = 0, $lid = NULL) {
   $subscribers     = array();
+  /* Removed as this causes out of memory errors during NuSOAP XML parsing of the response 
+   * if the list contains many subscribers.
+   * TODO: Consider using PHP internal SOAP library instead
   $anp             = new AnpSoapclient(variable_get('emf_apsis_api_username', ''), variable_get('emf_apsis_api_password', ''));
   $all_subscribers = $anp->call('GetSubscribers', array(
 		'strMailingListId' => $lid,
@@ -59,7 +62,7 @@ function emf_apsis_api_get_subscribers_subscribed($date = 0, $lid = NULL) {
 	  }
   } else {
   	//TODO: Add some error handling
-  }
+  }*/
   
   return $subscribers;
 }
