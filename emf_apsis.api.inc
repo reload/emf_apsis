@@ -21,9 +21,11 @@ function emf_apsis_api_subscribe($email, $fields, $lid) {
     'strMailingListID' => $lid,
   ));
   //TODO: Add some error handling
-  
+  if ($return['InsertSubscriberResult'] > -1) {
   //For now we assume subscribing worked as expected so return success
-  return true;
+    return TRUE;
+  }
+  return FALSE;
 }
 
 /**
