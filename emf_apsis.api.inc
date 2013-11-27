@@ -14,17 +14,18 @@
  */
 function emf_apsis_api_subscribe($email, $fields, $lid) {
   $anp    = new AnpSoapclient(variable_get('emf_apsis_api_username', ''), variable_get('emf_apsis_api_password', ''));
-  $return = $anp->Call('InsertSubscriber', array(
+  $return = $anp->Call('InsertSubscriberSid', array(
     'strEmail'         => $email,
     'strName'          => '',
     'strFormat'        => '',
     'strMailingListID' => $lid,
   ));
-  //TODO: Add some error handling
-  if ($return['InsertSubscriberResult'] > -1) {
-  //For now we assume subscribing worked as expected so return success
+  // TODO: Add some error handling
+  if ($return['InsertSubscriberResult'] < -10000) {
+    //For now we assume subscribing worked as expected so return success
     return TRUE;
   }
+  // Result codes between -1 and -7999 is error codes.
   return FALSE;
 }
 
@@ -40,7 +41,7 @@ function emf_apsis_api_unsubscribe($email, $lid) {
   //TODO: Add some error handling
   
   //For now we assume unsubscribing worked as expected so return success
-  return true;
+  return TRUE;
 }
 
 /**
